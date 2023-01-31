@@ -4,7 +4,7 @@ Got tired of looking at my GPU's temp sky-rocketing to 80 degress and obliterati
 
 This project is a simple solution that queries the temp of `GPU-0` via `nvidia-smi` and sets its fan speed according to a polynomial curve via `nvidia-settings`.
 
-> > Make sure to be running the process with elevated privileges, otherwise `nvidia-settings` refuses to apply the curve due to insufficient permissions.
+> Make sure to be running the process with elevated privileges, otherwise `nvidia-settings` refuses to apply the curve due to insufficient permissions.
 
 If you want to tweak/customize the curve, I highly recommend using [desmos](https://www.desmos.com/calculator) to easily visualize it.
 
