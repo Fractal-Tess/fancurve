@@ -29,7 +29,7 @@ fn main() {
         let temp_parse = regex.replace_all(gpu_temp, "");
 
         let current_temp =
-            u32::from_str(temp_parse.as_ref()).expect("Cannot convert GPU temp to u8 int");
+            u32::from_str(temp_parse.as_ref()).expect("Cannot convert GPU temp to u32 int");
 
         let fan_speed = ((current_temp - 25).pow(3) / 2000 + 30).clamp(40, 100);
 
