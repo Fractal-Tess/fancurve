@@ -23,7 +23,7 @@ fn main() {
             .lines()
             .filter(|line| line.contains("GPU Current Temp"))
             .next()
-            .unwrap();
+            .expect("Unable to parse gpu temp from nvidia-smi");
 
         let regex = Regex::new(r"\D").unwrap();
         let temp_parse = regex.replace_all(gpu_temp, "");
